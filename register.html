@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html">
+<head>
+    <title>Campus Events Calendar - Register</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            background-image: url('1.jpg');
+            opacity: 0.8;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            background-image: url('1.jpg');
+            background-image: url('1.jpg');
+            opacity: 0.8;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            background-image: url('1.jpg');
+            opacity: 0.8;
+        }
+
+        section {
+            padding: 20px;
+            background-image: url('1.jpg');
+        }
+
+        .registration-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input, select {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .radio-group label {
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #673ab7;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #512da8;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-image: url('1.jpg');
+            opacity: 0.999999999;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Campus Events Calendar</h1>
+    </header>
+
+    <nav>
+        <a href="register.html">Register</a>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="service.html">Service</a>
+        <a href="help.html">Help</a>
+    </nav>
+
+    <section>
+        <div class="registration-form">
+            <h2>Register for Events</h2>
+            <form onsubmit="return handleRegistration()">
+                <label for="fullName">Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="enrollmentNo">Enrollment No.:</label>
+                <input type="text" id="enrollmentNo" name="enrollmentNo" required>
+
+                <label for="department">Department:</label>
+                <select id="department" name="department" required>
+                    <option value="computerScience">Computer Science</option>
+                    <option value="electricalEngineering">Electrical Engineering</option>
+                    <option value="mechanicalEngineering">Mechanical Engineering</option>
+                    <!-- Add more options as needed -->
+                </select>
+
+                <label for="class">Class:</label>
+                <input type="text" id="class" name="class" required>
+
+                <label for="batch">Batch:</label>
+                <input type="text" id="batch" name="batch" required>
+
+                <label for="semester">Semester:</label>
+                <input type="text" id="semester" name="semester" required>
+
+                <label for="numStudents">Number of students in group:</label>
+                <input type="number" id="numStudents" name="numStudents" required>
+
+                <div class="radio-group">
+                    <label for="event">Event:</label>
+                    <input type="radio" id="musicConcert" name="event" value="musicConcert">
+                    <label for="musicConcert">Music Concert</label>
+
+                    <input type="radio" id="graduationCeremony" name="event" value="graduationCeremony">
+                    <label for="graduationCeremony">Graduation Ceremony</label>
+
+                    <input type="radio" id="technologyExpo" name="event" value="technologyExpo">
+                    <label for="technologyExpo">Technology Expo</label>
+
+                    <input type="radio" id="outdoorAdventure" name="event" value="outdoorAdventure">
+                    <label for="outdoorAdventure">Outdoor Adventure</label>
+
+                    <input type="radio" id="languageFestival" name="event" value="languageFestival">
+                    <label for="languageFestival">Language Festival</label>
+
+                    <input type="radio" id="musicFestival" name="event" value="musicFestival">
+                    <label for="musicFestival">Music Festival</label>
+                </div>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2023 Campus Events Calendar
+    </footer>
+
+    <script>
+        function handleRegistration() {
+            document.querySelector('.registration-form').style.display = 'none';
+            return false; 
+        }
+    </script>
+
+</body>
+</html>
